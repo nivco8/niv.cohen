@@ -1,3 +1,0 @@
-# niv.cohen
-
-Niv Cohen
