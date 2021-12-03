@@ -1,0 +1,108 @@
+@font-face {
+    font-family: myBestFont;
+    src: url(VarelaRound-Regular.ttf);
+}
+
+
+
+body {
+    background-color: rgb(223, 231, 253);
+    box-sizing      : border-box;
+    margin: 0%;
+    height: 100vh;
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'left  main  right'
+        'bottom bottom bottom';
+    text-align-last: center;
+}
+
+
+.photo1  {
+    width: 75%;
+    max-height: 100%;
+    opacity: 0.6;
+}
+
+#top {
+    grid-area       : header;
+    background-color: rgb(226, 236, 233);
+    margin-bottom   : 10px;
+}
+
+#LeftSide {
+    grid-area: left;
+}
+
+#RightSide {
+    grid-area: right;
+}
+
+#MainCenter {
+    grid-area: main;
+    font-family: myBestFont;
+}
+
+.input {
+    font-size: 30px;
+    margin: 2px;
+}
+
+.label {
+    font-size: 30px;
+    margin: 2px;
+
+}
+
+.button1 {
+    width: 50%;
+    font-size: 20px;
+    color: #48422a;
+    background-color: rgb(234, 228, 233);
+    border: none;
+    cursor: pointer;
+    font-family: myBestFont;
+}
+
+
+
+@media screen and (max-width: 720px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'header header'
+            'left  right'
+            'footer footer';
+        grid-gap: 10px;
+    }
+
+    #Pic {
+        grid-area    : footer;
+        align-content: center;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .grid-container {
+        background-color: rgb(234, 228, 233);
+
+        display: grid;
+        grid-template-areas:
+            'header'
+            'left''right'
+            'footer ';
+
+    }
+
+    div {
+        width: 100%;
+    }
+
